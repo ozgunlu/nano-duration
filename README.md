@@ -1,5 +1,5 @@
 # nano-duration
-[![PyPI](https://img.shields.io/pypi/v/nano-duration.svg?color=blue)](https://pypi.org/project/nano-duration/)
+[![PyPI](https://img.shields.io/pypi/v/nano-duration-py.svg?color=blue)](https://pypi.org/project/nano-duration-py/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 ![Size](https://img.shields.io/badge/size-~1KB-lightgrey.svg)
 [![CI](https://github.com/ozgunlu/nano-duration/actions/workflows/ci.yml/badge.svg)](https://github.com/ozgunlu/nano-duration/actions)
@@ -29,7 +29,7 @@ After installing:
 
 ```bash
 # CLI
-pip install nano-duration
+pip install nano-duration-py
 nano-duration "2h 15m 3s"      # 8103
 nano-duration 8103             # 2h15m3s
 ```
