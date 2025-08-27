@@ -1,0 +1,16 @@
+name: CI
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python app_min.py "1h 5m 2s" | grep -q '^3902$'
+      - run: python app_min.py 90 | grep -q '^1m30s$'
+      - run: pip install .
+      - run: nano-duration 90 | grep -q '^1m30s$'
+      - run: nano-duration "1h 5m 2s" | grep -q '^3902$'
